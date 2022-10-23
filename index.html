@@ -3,60 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css" >
+    <link rel="stylesheet" href="./style/style.css" >
   </head>
   <body>
-    <header>
-          <img src="./img/logo.png" alt="logo">
-          <img src="./img/LogoText.png" alt="textLogo" height="80" width="113">
-        <nav>
+    <header class="main_header">
+      <a href="#">
+        <img src="./img/logo.png" alt="logo">
+        <img src="./img/LogoText.png" alt="textLogo" height="80" width="113">
+      </a>
+      <nav class="navigation">
         <ul class="nav_list">
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Обзор</a></li>
-          <li><a href="#">Вопросы</a></li>
-          <li><a href="#">Персонал</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="#" class="nav_list_item">Услуги</a></li>
+          <li><a href="#" class="nav_list_item">Обзор</a></li>
+          <li><a href="#" class="nav_list_item">Вопросы</a></li>
+          <li><a href="#" class="nav_list_item">Персонал</a></li>
+          <li><a href="#" class="nav_list_item">Контакты</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <section class="vet_clinic">
         <article class="welcome">
           <div class="border">
-        <h2>Ветеринарная<br>
-            клиника</h2>
-        <h3>С заботой<br>
-            о Ваших питомцах</h3>
-          <a href="#" class="sign">Записаться на прием</a><br>
-          <a href="#" class="call">Заказать звонок</a>
-        </div>
+            <h2>Ветеринарная<br>клиника</h2>
+            <h3>С заботой<br>о Ваших питомцах</h3>
+            <a href="#" class="sign">Записаться на прием</a><br>
+            <a href="#" class="call">Заказать звонок</a>
+          </div>
         </article>
       </section>
-          <section class="services">
-
-            <div class="title">Наши услуги</div>
-            <ul class="services_pics">
-              <li><img src="./img/stethoscope.svg"></li>
-              <li><img src="./img/drugs.svg"></li>
-              <li><img src="./img/syringe.svg"></li>
-              <li><img src="./img/pill.svg"></li>
-              <li><img src="./img/case.svg"></li>
-            </ul>
-            <ul class="services_names">
-              <li>Терапия</li>
-              <li>Неврология</li>
-              <li>Вакцинация</li>
-              <li>Лаборатория</li>
-              <li>Хирургия</li>
-            </ul>
-          </section>
-        <iframe src="https://www.youtube.com/embed/7p2U8KcSwc8" title="Manifesto of the Communist Party (K. Marx/F. Engels)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ref"></iframe>
+      <section class="services">
+        <div class="title">Наши услуги</div>
+        <ul class="services_pics">
+          <li class="services_pics_item"><img src="./img/stethoscope.svg"></li>
+          <li class="services_pics_item"><img src="./img/drugs.svg"></li>
+          <li class="services_pics_item"><img src="./img/syringe.svg"></li>
+          <li class="services_pics_item"><img src="./img/pill.svg"></li>
+          <li class="services_pics_item"><img src="./img/case.svg"></li>
+        </ul>
+        <ul class="services_names">
+          <li class="services_names_item">Терапия</li>
+          <li class="services_names_item">Неврология</li>
+          <li class="services_names_item">Вакцинация</li>
+          <li class="services_names_item">Лаборатория</li>
+          <li class="services_names_item">Хирургия</li>
+        </ul>
+      </section>
+      <iframe src="https://www.youtube.com/embed/7p2U8KcSwc8" title="Manifesto of the Communist Party (K. Marx/F. Engels)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ref"></iframe>
       <section class="faq">
         <div class="title">Вопросы</div>
         <details class="question">
           <summary>Можно ли вызвать ветеринара на дом? </summary>
           <p><div class="border_faq">Да, конечно. Для этого Вам необходимо<br>
-            позвонить по телефону +375 (11) 111-11-11 и<br>
+            позвонить по телефону <a href="tel:+375111111111">+375 (11) 111-11-11</a> и<br>
             записаться на подходящее для Вас время.</div></p>
           </details>
         <details class="question">
@@ -74,93 +73,101 @@
       </section>
       <section class="specialists">
         <div class="title">Наши специалисты</div>
-        <ul>
-          <li><img src="./img/anastasia.png"><p>Анастасия<br>
-                            Иванова</p>
-            <p>Хирург</p>
+        <ul class="specialists_list">
+          <li>
+            <p class="specialists_item">
+              <img src="./img/anastasia.png">
+              <p class="specialist_name">Анастасия<br>Иванова</p>
+              <p class="specialist_title">Хирург</p>
+            </p>
           </li>
-          <li><img src="./img/constantine.png">
-          <p>Константин<br>
-              Водолазов</p>
-          <p>Невролог</p></li>
-          <li><img src="./img/victoria.png">
-            <p>Виктория<br>
-              Воскресенская</p>
-            <p>Терапевт</p></li>
+          <li>
+            <p class="specialists_item">
+              <img src="./img/constantine.png">
+              <p class="specialist_name">Константин<br>Водолазов</p>
+              <p class="specialist_title">Невролог</p>
+            </p>
+          </li>
+          <li>
+            <p class="specialists_item">
+              <img src="./img/victoria.png">
+              <p class="specialist_name">Виктория<br>Воскресенская</p>
+              <p class="specialist_title">Терапевт</>
+            </p>
+          </li>
         </ul>
       </section>
       <section class="appointment">
         <div class="title">Записаться на прием</div>
         <form action="#" class="form">
           <div class="border">
-          <fieldset class="ownerInfo">
-            <input id="name" placeholder="Имя*" type="text" required><br>
-            <input id="surname" placeholder="Фамилия*" type="text" required><br>
-            <input id="telephone" placeholder="Телефон*" type="tel" required><br>
-          </fieldset>
-          <fieldset class="petInfo">
-            <p>Ваш питомец*</p>
-            <div class="dogRat">
-            <input  id="dog" type="radio" name="pet" value="dog" class="radio">
-            <label for="dog">Собака</label>
-            <input  id="rat" type="radio" name="pet" value="rat" class="radio">
-            <label for="rat">Грызун</label>
-            </div>
-            <div class="catOther">
-            <input  id="cat" type="radio" name="pet" value="cat" class="radio">
-            <label for="cat">Кот</label>
-            <input  id="otherRadio" type="radio" name="pet" class="radio">
-            <input id="otherInput" placeholder="Другое" type="text" class="otherInfo">
+            <fieldset class="ownerInfo">
+              <input id="name" placeholder="Имя*" type="text" required><br>
+              <input id="surname" placeholder="Фамилия*" type="text" required><br>
+              <input id="telephone" placeholder="Телефон*" type="tel" required><br>
+            </fieldset>
+            <fieldset class="petInfo">
+              <p>Ваш питомец*</p>
+              <div class="dogRat">
+                <input  id="dog" type="radio" name="pet" value="dog" class="radio">
+                <label for="dog">Собака</label>
+                <input  id="rat" type="radio" name="pet" value="rat" class="radio">
+                <label for="rat">Грызун</label>
+              </div>
+              <div class="catOther">
+                <input  id="cat" type="radio" name="pet" value="cat" class="radio">
+                <label for="cat">Кот</label>
+                <input  id="otherRadio" type="radio" name="pet" class="radio">
+                <input id="otherInput" placeholder="Другое" type="text" class="otherInfo">
+              </div>
+            </fieldset>
+            <fieldset>
+              <p>Отделения</p>
+              <input  id="therapist" type="checkbox" name="department" value="therapist">
+              <label for="therapist">Терапевтическое</label>
+              <input  id="neurologist" type="checkbox" name="department" value="neurologist">
+              <label for="neurologist">Неврологическое</label>
+              <input  id="vaccine" type="checkbox" name="department" value="vaccine">
+              <label for="vaccine">Вакцинация</label>
+              <input  id="labaratory" type="checkbox" name="department" value="labaratory">
+              <label for="labaratory">Лаборатория</label>
+              <input  id="surgeon" type="checkbox" name="department" value="surgeon">
+              <label for="surgeon">Хирургическое</label>
+            </fieldset>
+            <fieldset>
+              <label for="receipt">Дата приема<em>*</em></label><br>
+              <input id="receipt" type="date" min="2022-10-13" max="2022-11-13" required><br>
+              <label for="receiptTime">Доступное время приема<em>*</em></label><br>
+              <input id="receiptTime" list="timeList" required>
+
+              <datalist id="timeList">
+                <option label="8:30" value="8:30">
+                <option label="9:30" value="9:30">
+                <option label="10:30" value="10:30">
+                <option label="11:30" value="11:30">
+                <option label="12:30" value="12:30">
+                <option label="13:30" value="13:30">
+                <option label="14:30" value="14:30">
+                <option label="15:30" value="15:30">
+                <option label="16:30" value="16:30">
+                <option label="17:30" value="17:30">
+                <option label="18:30" value="18:30">
+              </datalist>
+            </fieldset>
+            <button type="submit" id="formSubmit" class="submit">Записаться 
+              <svg width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50.126" cy="35.4484" r="14.6819" transform="rotate(44.8403 50.126 35.4484)" fill="white"/>
+                <rect x="39.7478" y="25.1252" width="29.3639" height="29.3639" transform="rotate(44.8403 39.7478 25.1252)" fill="white"/>
+                <circle cx="29.3626" cy="35.4165" r="14.6819" transform="rotate(-91.4219 29.3626 35.4165)" fill="white"/>
+                <ellipse cx="12.2997" cy="17.7609" rx="3.29485" ry="5.21685" transform="rotate(-33.1197 12.2997 17.7609)" fill="white"/>
+                <ellipse rx="3.29485" ry="5.21685" transform="matrix(-0.837531 -0.54639 -0.54639 0.837531 66.2513 17.7609)" fill="white"/>
+                <ellipse cx="27.1268" cy="12.2697" rx="3.29485" ry="5.21685" transform="rotate(-9.33993 27.1268 12.2697)" fill="white"/>
+                <ellipse rx="3.29485" ry="5.21685" transform="matrix(-0.986743 -0.162292 -0.162292 0.986743 51.4243 12.2697)" fill="white"/>
+              </svg>
+            </button>
+            <button type="reset" id="formReset" class="reset">Очистить</button>
           </div>
-          </fieldset>
-          <fieldset>
-            <p>Отделения</p>
-            <input  id="therapist" type="checkbox" name="department" value="therapist">
-            <label for="therapist">Терапевтическое</label>
-            <input  id="neurologist" type="checkbox" name="department" value="neurologist">
-            <label for="neurologist">Неврологическое</label>
-            <input  id="vaccine" type="checkbox" name="department" value="vaccine">
-            <label for="vaccine">Вакцинация</label>
-            <input  id="labaratory" type="checkbox" name="department" value="labaratory">
-            <label for="labaratory">Лаборатория</label>
-            <input  id="surgeon" type="checkbox" name="department" value="surgeon">
-            <label for="surgeon">Хирургическое</label>
-          </fieldset>
-          <fieldset>
-            <label for="receipt">Дата приема<em>*</em></label><br>
-            <input id="receipt" type="date" min="2022-10-13" max="2022-11-13" required><br>
-            <label for="receiptTime">Доступное время приема<em>*</em></label><br>
-            <input id="receiptTime" list="timeList" required>
-
-            <datalist id="timeList">
-              <option label="8:30" value="8:30">
-              <option label="9:30" value="9:30">
-              <option label="10:30" value="10:30">
-              <option label="11:30" value="11:30">
-              <option label="12:30" value="12:30">
-              <option label="13:30" value="13:30">
-              <option label="14:30" value="14:30">
-              <option label="15:30" value="15:30">
-              <option label="16:30" value="16:30">
-              <option label="17:30" value="17:30">
-              <option label="18:30" value="18:30">
-      </datalist>
-          </fieldset>
-          <button type="submit" id="formSubmit" class="submit">Записаться 
-            <svg width="72" height="71" viewBox="0 0 72 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50.126" cy="35.4484" r="14.6819" transform="rotate(44.8403 50.126 35.4484)" fill="white"/>
-              <rect x="39.7478" y="25.1252" width="29.3639" height="29.3639" transform="rotate(44.8403 39.7478 25.1252)" fill="white"/>
-              <circle cx="29.3626" cy="35.4165" r="14.6819" transform="rotate(-91.4219 29.3626 35.4165)" fill="white"/>
-              <ellipse cx="12.2997" cy="17.7609" rx="3.29485" ry="5.21685" transform="rotate(-33.1197 12.2997 17.7609)" fill="white"/>
-              <ellipse rx="3.29485" ry="5.21685" transform="matrix(-0.837531 -0.54639 -0.54639 0.837531 66.2513 17.7609)" fill="white"/>
-              <ellipse cx="27.1268" cy="12.2697" rx="3.29485" ry="5.21685" transform="rotate(-9.33993 27.1268 12.2697)" fill="white"/>
-              <ellipse rx="3.29485" ry="5.21685" transform="matrix(-0.986743 -0.162292 -0.162292 0.986743 51.4243 12.2697)" fill="white"/>
-            </svg>
-          </button>
-          <button type="reset" id="formReset" class="reset">Очистить</button>
-        </div>
         </form>
-
       </section>
       <section class="contacts">
         <div class="title">Контакты</div>
@@ -172,40 +179,39 @@
             пн-пт: 8:00-20:00<br>
             сб-вс: 10:00-18:00</h3>
             <h3>Телефон справки:<br>
-              + 375 (29) 123-12-31
+              <a href="tel:+375291231231">+ 375 (29) 123-12-31</a>
             </h3>
             <h3>E-mail<br>
-              pets@pets.by</h3>
-              <h3>г. Минск, ул. Солнечная 1,<br>
-                222222</h3>
+              <a href="email:pets@pets.by">pets@pets.by</a></h3>
+              <h3>г. Минск, ул. Солнечная 1,<br>222222</h3>
         </article>
       </section>
     </main>
-    <footer>
-      <ul>
-        <li>
-          <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <a href="https://www.vk.com">
+    <footer class="main_footer">
+      <ul class="footer_socials">
+        <li class="socials_item">
+          <a href="https://www.vk.com">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 0C8.50646 0 0 8.50646 0 19C0 29.4935 8.50646 38 19 38C29.4935 38 38 29.4935 38 19C38 8.50646 29.4935 0 19 0ZM26.3071 21.4364C26.3071 21.4364 27.9874 23.0949 28.401 23.8648C28.4129 23.8806 28.4189 23.8965 28.4228 23.9044C28.591 24.1874 28.6306 24.4071 28.5475 24.5714C28.409 24.8445 27.934 24.9791 27.7717 24.9909H24.8029C24.5971 24.9909 24.1656 24.9375 23.6431 24.5773C23.2414 24.2962 22.8455 23.8351 22.4596 23.3858C21.8836 22.7169 21.3849 22.139 20.8822 22.139C20.8183 22.1388 20.7549 22.1489 20.6942 22.1686C20.3142 22.2914 19.8273 22.8336 19.8273 24.2784C19.8273 24.7297 19.471 24.989 19.2197 24.989H17.86C17.3969 24.989 14.9843 24.8267 12.8468 22.5724C10.2303 19.8115 7.8751 14.2737 7.85531 14.2223C7.70687 13.8641 8.01365 13.6721 8.34812 13.6721H11.3466C11.7464 13.6721 11.877 13.9155 11.968 14.1312C12.0749 14.3826 12.4668 15.3821 13.11 16.5063C14.153 18.339 14.7923 19.0831 15.3049 19.0831C15.401 19.082 15.4954 19.0575 15.58 19.0119C16.249 18.6398 16.1243 16.2549 16.0946 15.7601C16.0946 15.6671 16.0926 14.6933 15.7502 14.2262C15.5048 13.8878 15.0872 13.7592 14.8339 13.7117C14.9364 13.5702 15.0715 13.4555 15.2277 13.3772C15.6869 13.1476 16.5142 13.114 17.3355 13.114H17.7927C18.6833 13.1258 18.9129 13.1832 19.2355 13.2644C19.8886 13.4207 19.9025 13.8423 19.8451 15.2851C19.8273 15.6948 19.8095 16.1579 19.8095 16.7042C19.8095 16.8229 19.8035 16.9496 19.8035 17.0842C19.7838 17.8184 19.76 18.6517 20.2785 18.9941C20.3462 19.0365 20.4243 19.0591 20.5042 19.0594C20.6843 19.0594 21.2266 19.0594 22.6951 16.5399C23.148 15.7289 23.5416 14.8863 23.8727 14.0184C23.9024 13.967 23.9895 13.8086 24.0924 13.7473C24.1683 13.7086 24.2526 13.6889 24.3378 13.6899H27.8627C28.2467 13.6899 28.5099 13.7473 28.5594 13.8957C28.6465 14.1312 28.5435 14.8497 26.9345 17.0287L26.216 17.9768C24.7574 19.8886 24.7574 19.9856 26.3071 21.4364Z" fill="white"/>
-            </a>
             </svg>
+          </a>
         </li>
-        <li>
-          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <a href="https://www.instagram.com/">
+        <li class="socials_item">
+          <a href="https://www.instagram.com/">
+            <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M35.6851 6.15448C36.2141 7.55798 36.4948 9.04285 36.5148 10.5426C36.6252 12.429 36.6257 13.0459 36.6296 17.8208V17.8871C36.6296 22.7247 36.6039 23.3287 36.5187 25.2336C36.489 26.7168 36.2098 28.1782 35.689 29.5643C35.2298 30.7479 34.529 31.8228 33.6313 32.7205C32.7336 33.6182 31.6587 34.319 30.4752 34.7782C29.0897 35.2982 27.626 35.5787 26.1465 35.6079C24.2554 35.7188 23.6356 35.7188 18.7999 35.7188C13.9643 35.7188 13.3603 35.6931 11.4534 35.6079C9.97095 35.5592 8.50769 35.2578 7.12665 34.7168C5.94263 34.2585 4.86719 33.5583 3.96912 32.6609C3.07098 31.7635 2.37 30.6886 1.91083 29.505C1.39001 28.1168 1.11078 26.6554 1.08112 25.1743C0.970215 23.2811 0.970215 22.6633 0.970215 17.8278C0.970215 12.9921 0.995972 12.3881 1.08112 10.4812C1.10907 9.0022 1.38971 7.53882 1.91083 6.15448C2.3692 4.9704 3.0697 3.89508 3.96753 2.99731C4.8653 2.09949 5.94061 1.39899 7.12469 0.940613C8.50952 0.420715 9.97253 0.139526 11.4514 0.108887C13.3425 0 13.9623 0 18.7979 0C23.6336 0 24.2375 0.0237427 26.1425 0.108887C27.6221 0.139282 29.0858 0.420532 30.4712 0.940613C31.6551 1.39929 32.7302 2.09991 33.628 2.99768C34.5258 3.89545 35.2264 4.97058 35.6851 6.15448ZM9.63159 17.8179C9.63159 22.8752 13.7286 26.9723 18.7861 26.9723C21.214 26.9723 23.5424 26.0078 25.2592 24.291C26.976 22.5742 27.9405 20.2457 27.9405 17.8179C27.9405 15.3899 26.976 13.0614 25.2592 11.3446C23.5424 9.62781 21.214 8.66333 18.7861 8.66333C13.7286 8.66333 9.63159 12.7604 9.63159 17.8179ZM26.1702 8.32471C26.1702 9.505 27.1227 10.4594 28.3049 10.4594C29.4831 10.4594 30.4376 9.505 30.4376 8.32471C30.4376 8.04456 30.3823 7.76709 30.2751 7.50818C30.1679 7.24939 30.0107 7.01416 29.8126 6.81604C29.6145 6.61792 29.3793 6.46075 29.1204 6.35352C28.8615 6.24628 28.5841 6.1911 28.3039 6.1911C28.0237 6.1911 27.7462 6.24628 27.4874 6.35352C27.2285 6.46075 26.9933 6.61792 26.7952 6.81604C26.6777 6.93353 26.5746 7.06409 26.4878 7.20483C26.4282 7.30139 26.3763 7.40283 26.3326 7.50818C26.2254 7.76709 26.1702 8.04456 26.1702 8.32471ZM24.7328 17.8162C24.7328 21.1003 22.0705 23.7627 18.7863 23.7627C15.5021 23.7627 12.8398 21.1003 12.8398 17.8162C12.8398 14.532 15.5021 11.8696 18.7863 11.8696C22.0705 11.8696 24.7328 14.532 24.7328 17.8162Z" fill="white"/>
-            </a>
-          </svg>
+            </svg>
+          </a>
         </li>
-        <li>
-          <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <a href="https://www.facebook.com">
-            <path d="M20 0C8.9549 0 0 8.78373 0 19.6177C0 29.4079 7.31273 37.5226 16.8757 39V25.2898H11.7952V19.6177H16.8757V15.2955C16.8757 10.3749 19.862 7.66149 24.4284 7.66149C26.6167 7.66149 28.9089 8.04407 28.9089 8.04407V12.8685H26.3806C23.9004 12.8685 23.1243 14.3832 23.1243 15.9351V19.6138H28.6669L27.7808 25.2858H23.1243V38.9961C32.6873 37.5266 40 29.4099 40 19.6177C40 8.78373 31.0451 0 20 0V0Z" fill="white"/>
-            </a>
-          </svg>
+        <li class="socials_item">
+          <a href="https://www.facebook.com">
+            <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 0C8.9549 0 0 8.78373 0 19.6177C0 29.4079 7.31273 37.5226 16.8757 39V25.2898H11.7952V19.6177H16.8757V15.2955C16.8757 10.3749 19.862 7.66149 24.4284 7.66149C26.6167 7.66149 28.9089 8.04407 28.9089 8.04407V12.8685H26.3806C23.9004 12.8685 23.1243 14.3832 23.1243 15.9351V19.6138H28.6669L27.7808 25.2858H23.1243V38.9961C32.6873 37.5266 40 29.4099 40 19.6177C40 8.78373 31.0451 0 20 0V0Z" fill="white"/>
+            </svg>
+          </a>
         </li>
       </ul>
-      <p>Copyright 2020</p>
+      <p class="footer_copyright">Copyright 2020</p>
     </footer>
   </body>
 </html>

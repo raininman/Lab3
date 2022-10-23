@@ -10,6 +10,10 @@ body{
   padding-inline-start: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 header{
   margin-left: 100px;
   display: flex;
