@@ -2,12 +2,20 @@
 @font-face {
   font-family: Comfortaa;
   src: url(../fonts/Comfortaa/static/Comfortaa-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Comfortaa;
+  src: url(../fonts/Comfortaa/static/Comfortaa-Regular.ttf);
+  font-weight: 400;
 }
 
 body{
   font-family: Comfortaa;
   background-color: #FDFDFD;
   padding-inline-start: 0;
+  font-weight: 700;
 }
 
 a{
@@ -18,24 +26,40 @@ header{
   margin-left: 100px;
   display: flex;
   gap: 50px;
-  font-weight: 700;
   font-size: 24px;
   text-align: justify;
-  margin-bottom: 20px;
 }
 
-nav li{
+.logo_img{
+  margin-left: 100px;
+  margin-right: 33px;
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+
+.logo_text{
+  margin-top: 19px;
+  margin-bottom: 19px;
+  margin-right: 100px;
+}
+
+.navigation{
+  margin-top: 54px;
+  margin-bottom: 50px;
+}
+
+.nav_list li{
   list-style: none;
-  display: inline;
-  padding: 77px;
+  display: inline-flex;
+  padding: 0px 2em ;
 }
 
-nav a{
+.nav_list_item{
   text-decoration: none;
   color: #000000;
 }
 
-nav a:hover{
+.nav_list_item:hover{
   color: #FF9432;;
 }
 
@@ -74,7 +98,6 @@ nav a:hover{
   font-size: 36px;
 }
 
-
 .sign{
   display: block;
   text-align: center;
@@ -104,25 +127,21 @@ nav a:hover{
   box-shadow: 0px 4px 4px rgba(114, 0, 0, 0.25);
 }
 
-.services h2{
-  font-size: 48px;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  text-align: center;
+.services{
+  margin-left: 40px;
 }
 
 .services li{
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
   font-size: 24px;
-  padding-left:100px;
   list-style: none;
-  margin-top: 100px;
-  position: relative;
-  display: inline;
-  padding: 77px;
+  text-align: center;
+  padding: 50px 100px;
 }
 
 .ref{
-  margin-top: 100px;
   width: 90vw;
   height: 90vh;
   margin-left: 5vw;
@@ -148,10 +167,6 @@ nav a:hover{
 	border-width: 0 10px;
 }
 
-.faq{
-  
-}
-
 .question{
   display: flex;
 	vertical-align: middle;
@@ -171,6 +186,25 @@ nav a:hover{
   border:2px dashed #FF9432;
   font-weight: 400;
   font-size: 36px;
+}
+
+.specialist_name{
+  font-weight: 700;
+}
+
+.specialist_title{
+  font-weight: 400;
+}
+
+.specialists_list{
+  display: inline-grid;
+  grid-auto-flow: column;
+  column-gap: 20vw;
+  align-items: center;
+  font-size: 36px;
+  list-style: none;
+  text-align: center;
+  padding: 50px 100px;
 }
 
 .form{
@@ -262,24 +296,27 @@ fieldset{
 
 }
 
-.submit{
+.form_buttons{
   font-family: Comfortaa;
   font-weight: 700;
   font-size: 36px;
   margin: 30px;
-  padding: 10px;
+}
+
+.submit{
+  display:inline-flex;
+  column-gap: 4px;
+  padding: 18px 38px;
   text-align: center;
+  align-items: center;
+  line-height: 1;
   color: #FFFFFF;
   background: linear-gradient(90deg, #FF9432 0%, #FFCF24 100.09%);
-  border-radius: 48px;
+  border-radius: 54px;
   border: none;
 }
 
 .reset{
-  font-family: Comfortaa;
-  font-weight: 700;
-  font-size: 36px;
-  margin: 30px;
   padding: 27px 38px;
   color: #FF9432;
   background: #FFFFFF;
@@ -308,22 +345,40 @@ fieldset{
   margin-bottom: 30px;
 }
 
-footer{
+.contact_info a{
+  color: white;
+}
+
+.main_footer{
   color: #FDFDFD;
   background: #864000;
 }
 
-footer li{
+.footer_socials{
   list-style: none;
-  display: inline;
-  margin-left: 80px;
-  margin-bottom: 25px;
+	padding: 0;
+	margin:0;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  justify-content: center;
+	padding-left: 20px;
 }
 
-footer li:nth-child(1){
-  margin-left: 40vw;
+.footer_socials:not(:last-child) img{
+	margin-right: 20px;
 }
-footer p{
+.footer_socials a{
+	opacity: 0.5;
+}
+.footer_socials a:hover{
+	opacity: 1;
+}
+.footer_socials a:focus{
+	opacity: 0.2;
+}
+
+.footer_copyright{
   text-align: center;
   font-size: 18px;
   padding-bottom: 30px;
