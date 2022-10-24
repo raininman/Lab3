@@ -15,6 +15,7 @@ body{
   font-family: Comfortaa;
   background-color: #FDFDFD;
   padding-inline-start: 0;
+  overflow-x: hidden;
   font-weight: 700;
 }
 
@@ -324,25 +325,25 @@ fieldset{
   border-radius: 48px;
 }
 
+.map_contacts{
+display: inline-flex;
+}
+
 .map iframe{
-  float: left;
-  width: 60vw;
-  height: 50vw;
+  width: 1200px;
+  height: 800px;
   margin: 0;
-  margin-bottom: 30px;
 }
 
 
 .contact_info{
-  float: right;
-  width: 33.9vw;
-  height: 45.85vw;
+  width: 680px;
+  height: 760px;
   color: #FDFDFD;
   background: #FF9432;
-  padding: 40px;
+  padding: 40px 0 0 40px;
   margin: 0;
   font-size: 36px;
-  margin-bottom: 30px;
 }
 
 .contact_info a{
@@ -350,29 +351,30 @@ fieldset{
 }
 
 .main_footer{
+  width: 1920px;
+  padding-top: 60px;
   color: #FDFDFD;
   background: #864000;
 }
 
-.footer_socials{
+.socials{
   list-style: none;
 	padding: 0;
 	margin:0;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
+  gap: 65px;
   justify-content: center;
 	padding-left: 20px;
 }
 
-.footer_socials:not(:last-child) img{
-	margin-right: 20px;
+.socials svg{
+	fill: #fff;
 }
-.footer_socials a{
-	opacity: 0.5;
-}
-.footer_socials a:hover{
-	opacity: 1;
+
+.socials svg:hover{
+	fill: #FF9432;
 }
 .footer_socials a:focus{
 	opacity: 0.2;
@@ -381,5 +383,5 @@ fieldset{
 .footer_copyright{
   text-align: center;
   font-size: 18px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
