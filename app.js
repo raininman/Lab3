@@ -72,3 +72,24 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+
+let offset = 0;
+const sliderLine = document.querySelector('.slider-line');
+
+document.querySelector('.right_arrow').addEventListener('click', function(){
+    offset = offset + 500;
+    if (offset > 1000) {
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + 'px';
+});
+
+document.querySelector('.left_arrow').addEventListener('click', function () {
+    offset = offset - 500;
+    if (offset < 0) {
+        offset = 1000;
+    }
+    sliderLine.style.left = -offset + 'px';
+});

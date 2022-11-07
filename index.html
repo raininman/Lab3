@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="zxx">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +7,55 @@
     <script src="https://cdn.jsdelivr.net/npm/datalist-css/dist/datalist-css.min.js"></script>
     <title>lab3</title>
     <script src="js/vue.js"></script>
-
   </head>
   <body class="sample">
+    <div :class="[close ? 'cover' : 'notCover']">
     <header class="main_header">
-      <a>
-        <img src="./img/logo.png"  class="logo_img" alt="logo">
-        <img src="./img/LogoText.png"  class="logo_text" alt="textLogo" height="80" width="113">
-      </a>
       <nav class="navigation">
-        <ul class="nav_list">
-          <li><a href="#services" class="nav_list_item">Услуги</a></li>
-          <li><a href="#review" class="nav_list_item">Обзор</a></li>
-          <li><a href="#faq" class="nav_list_item">Вопросы</a></li>
-          <li><a href="#specialists" class="nav_list_item">Персонал</a></li>
-          <li><a href="#contacts" class="nav_list_item">Контакты</a></li>
-        </ul>
+        <div class="main_header_bar">
+          <div class="main_header_navigation">
+            <a class="logo">
+              <img src="./img/logo.png"  class="logo_img" alt="logo">
+              <img src="./img/LogoText.png"  class="logo_text" alt="textLogo" height="80" width="113">
+            </a>
+            <ul class="nav_list">
+              <li><a href="#services" class="nav_list_item">Услуги</a></li>
+              <li><a href="#review" class="nav_list_item">Обзор</a></li>
+              <li><a href="#faq" class="nav_list_item">Вопросы</a></li>
+              <li><a href="#specialists" class="nav_list_item">Персонал</a></li>
+              <li><a href="#contacts" class="nav_list_item">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
+      <div class="medium">
+        <button class="ipad_burger"></button>
+        <nav class="medium_nav">
+          <ul>
+          <li><a href="#services" class="nav_list_item">Услуги</a></li>
+            <li><a href="#review" class="nav_list_item">Обзор</a></li>
+            <li><a href="#faq" class="nav_list_item">Вопросы</a></li>
+            <li><a href="#specialists" class="nav_list_item">Персонал</a></li>
+            <li><a href="#contacts" class="nav_list_item">Контакты</a></li>
+          </ul>
+        </nav>
+      <div class="small">
+        <button class="iphone_burger"></button>
+        <nav class="small_nav">
+          <ul>
+          <li><a href="#services" class="nav_list_item">Услуги</a></li>
+            <li><a href="#review" class="nav_list_item">Обзор</a></li>
+            <li><a href="#faq" class="nav_list_item">Вопросы</a></li>
+            <li><a href="#specialists" class="nav_list_item">Персонал</a></li>
+            <li><a href="#contacts" class="nav_list_item">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     </header>
     <main class="container">
       <section class="vet_clinic">
+        <h2 class="visually_hidden">Ветеринарная клиника</h2>
         <article class="welcome">
           <div class="border">
             <h2>Ветеринарная<br>клиника</h2>
@@ -37,6 +66,7 @@
         </article>
       </section>
       <section class="services" id="services">
+        <h2 class="visually_hidden">Услуги</h2>
         <div class="title">Наши услуги</div>
         <ul class="services_pics">
           <li class="services_pics_item">
@@ -87,30 +117,32 @@
           </li>
           <li class="services_pics_item">
             <div>
-            <img src="./img/case.svg">
+            <img src="./img/case.svg" alt="case svg">
             <p>Хирургия</p>
           </div>
           </li>
         </ul>
       </section>
-      <!-- <iframe src="https://www.youtube.com/embed/7p2U8KcSwc8" title="Manifesto of the Communist Party (K. Marx/F. Engels)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ref" id="review"></iframe> -->
+      <h2 class="visually_hidden">Обзор</h2>
+      <iframe src="https://www.youtube.com/embed/2n4n2lRuYTk" title="Lorem ipsum dolor sit amet" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ref" id="review"></iframe>
       <section class="faq" id="faq">
+        <h2 class="visually_hidden">Вопросы</h2>
         <div class="title">Вопросы</div>
         <div class="faq_container">
         <div class="question">
           <p class="faq_question">Можно ли вызвать ветеринара на дом?</p>
-          <button class="faq_but" @click="showFAQ1" v-if="!FAQ1Close"><img src="./img/faqButton.svg"></button>
-          <button class="faq_but" @click="closeFAQ1" v-if="FAQ1Close"><img src="./img/faqButton.svg" class="close_faq_svg"></button>
+          <button class="faq_but" @click="showFAQ1" v-if="!FAQ1Close"><img src="./img/faqButton.svg" alt="open button"></button>
+          <button class="faq_but" @click="closeFAQ1" v-if="FAQ1Close"><img src="./img/faqButton.svg" class="close_faq_svg" alt="close button"></button>
         </div>
-        <p class="faq_answer" v-if="FAQ1">Да, конечно. Для этого Вам необходимо<br>
-          позвонить по телефону <a href="tel:+375111111111">+375 (11) 111-11-11</a> и<br>
+        <p class="faq_answer" v-if="FAQ1">Да, конечно. Для этого Вам необходимо
+          позвонить по телефону <a href="tel:+375111111111">+375 (11) 111-11-11</a> и
           записаться на подходящее для Вас время.</p>
         </div>
         <div class="faq_container">
           <div class="question">
             <p class="faq_question">Какие анализы сдать перед приемом?</p>
-            <button class="faq_but" @click="showFAQ2" v-if="!FAQ2Close"><img src="./img/faqButton.svg"></button>
-            <button class="faq_but" @click="closeFAQ2" v-if="FAQ2Close"><img src="./img/faqButton.svg" class="close_faq_svg"></button>
+            <button class="faq_but" @click="showFAQ2" v-if="!FAQ2Close"><img src="./img/faqButton.svg" alt="open button"></button>
+            <button class="faq_but" @click="closeFAQ2" v-if="FAQ2Close"><img src="./img/faqButton.svg" class="close_faq_svg" alt="close button"></button>
           </div>
           <p class="faq_answer" v-if="FAQ2">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -119,69 +151,63 @@
         <div class="faq_container">
           <div class="question">
             <p class="faq_question">Есть ли у вас бесплатная вакцинация?</p>
-            <button class="faq_but" @click="showFAQ3" v-if="!FAQ3Close"><img src="./img/faqButton.svg"></button>
-            <button class="faq_but" @click="closeFAQ3" v-if="FAQ3Close"><img src="./img/faqButton.svg" class="close_faq_svg"></button>
+            <button class="faq_but" @click="showFAQ3" v-if="!FAQ3Close"><img src="./img/faqButton.svg" alt="open button"></button>
+            <button class="faq_but" @click="closeFAQ3" v-if="FAQ3Close"><img src="./img/faqButton.svg" class="close_faq_svg" alt="close button"></button>
           </div>
           <p class="faq_answer" v-if="FAQ3">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
         </div>
         <div class="faq_container">
           <div class="question">
             <p class="faq_question">Вы лечите экзотических животных?</p>
-            <button class="faq_but" @click="showFAQ4" v-if="!FAQ4Close"><img src="./img/faqButton.svg"></button>
-            <button class="faq_but" @click="closeFAQ4" v-if="FAQ4Close"><img src="./img/faqButton.svg" class="close_faq_svg"></button>
+            <button class="faq_but" @click="showFAQ4" v-if="!FAQ4Close"><img src="./img/faqButton.svg" alt="open button"></button>
+            <button class="faq_but" @click="closeFAQ4" v-if="FAQ4Close"><img src="./img/faqButton.svg" class="close_faq_svg" alt="close button"></button>
           </div>
           <p class="faq_answer" v-if="FAQ4">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
         </div>
       </section>
-      
+      <div class="title">Наши специалисты</div>
       <section class="specialists" id="specialists">
-        <div class="title">Наши специалисты</div>
-        <ul class="specialists_list">
-          <li>
-            <button class="arrow">
-              <svg width="39" height="74" viewBox="0 0 39 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M37 2L2 37L37 72" stroke="#FF9432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </li>
-          <li>
-            <div class="specialists_item">
+        <h2 class="visually_hidden">Персонал</h2>
+        
+        <button class="left_arrow">
+          <svg width="39" height="74" viewBox="0 0 39 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 2L2 37L37 72" stroke="#FF9432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
+        <div class="slider">
+          <div class="slider-line">
+            <div class="slider_item">
               <img src="./img/anastasia2.jpg" alt="Анастасия Иванова">
               <p class="specialist_name">Анастасия<br>Иванова</p>
               <p class="specialist_title">Хирург</p>
             </div>
-          </li>
-          <li>
-            <div class="specialists_item">
+            <div class="slider_item">
               <img src="./img/constantine2.jpg" alt="Константин Водолазов">
               <p class="specialist_name">Константин<br>Водолазов</p>
               <p class="specialist_title">Невролог</p>
             </div>
-          </li>
-          <li>
-            <div class="specialists_item">
+            <div class="slider_item">
               <img src="./img/victoria2.jpg" alt="Виктория Воскресенская">
               <p class="specialist_name">Виктория<br>Воскресенская</p>
               <p class="specialist_title">Терапевт</p>
             </div>
-          </li>
-          <li>
-            <button class="arrow">
-              <svg width="39" height="74" viewBox="0 0 39 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 2L37 37L2 72" stroke="#FF9432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-          </li>
-        </ul>
+          </div>
+      </div>
+      <button class="right_arrow">
+        <svg width="39" height="74" viewBox="0 0 39 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L37 37L2 72" stroke="#FF9432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
       </section>
       <section class="appointment">
+        <h2 class="visually_hidden">Запись</h2>
         <div class="title">Записаться на прием</div>
         <form action="#" class="form" id="appointment">
           <div class="border">
             <fieldset class="ownerInfo">
               <input id="name" placeholder="Имя*" type="text" required class="info"><br>
               <input id="surname" placeholder="Фамилия*" type="text" required><br>
-              <input id="telephone" placeholder="Телефон*" type="tel" required><br>
+              <input id="telephone" placeholder="Телефон*" type="tel" required maxlength="14" minlength="13"><br>
             </fieldset>
             <p>Ваш питомец*</p>
             <fieldset class="petInfo">
@@ -241,7 +267,7 @@
               </div>
               <div class="receiptTime">
                 <label for="input">Доступное время приема<em>*</em></label><br>
-                <input role="combobox" autocomplete="off" list="" id="input" name="browsers" type="text" aria-expanded="time to receipt" required>
+                <input autocomplete="off" list="" id="input" name="browsers" type="text" aria-expanded="time_to_receipt" required>
                 <datalist id="browsers">
                   <option label="8:30" value="8:30">
                   <option label="9:30" value="9:30">
@@ -278,12 +304,16 @@
           </div>
         </form>
       </section>
+
       <div class="title">Контакты</div>
       <section class="map_contacts">
+        <h2 class="visually_hidden">Контакты и карта</h2>
       <section class="map">
+        <h2 class="visually_hidden">Карта</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.8273415051563!2d27.561427799999997!3d53.8637181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbd1cb7de1290f%3A0x59df0b902b6676cc!2sUlitsa%20Solnechnaya%201%2C%20Minsk!5e0!3m2!1sen!2sby!4v1665499007002!5m2!1sen!2sby" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
       <section class="contact_info" id="contacts">
+        <h2 class="visually_hidden">Контакты</h2>
         <h3>Режим работы:<br>
         пн-пт: 8:00-20:00<br>
         сб-вс: 10:00-18:00</h3>
@@ -322,7 +352,9 @@
       </ul>
       <p class="footer_copyright">Copyright 2020</p>
     </footer>
+  </div>
     <section class="request_call" v-if="close">
+      <h2 class="visually_hidden">Заказ звонка</h2>
       <div class="border">
       <button class="close" @click="showCall">
         <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -344,7 +376,7 @@
         </form>
       </div>
     </section>
-    <button onclick="topFunction()" id="myBtn" title="Go to top" class="anchor"><img src="./img/anchor.svg"></button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="anchor"><img src="./img/anchor.svg" alt="anchor"></button>
     <script>
       Vue.createApp({
         data: () => ({
@@ -419,7 +451,6 @@
             this.FAQ4Close = false
           },
         },
-       
       }).mount('.sample');
     </script>
     <script src="app.js"></script>
