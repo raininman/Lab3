@@ -741,6 +741,9 @@ grid-template-rows: 1fr;
     grid-template-columns: min-content min-content;
 
   }
+  .ipad_burger{
+    display: block;
+  }
   .medium{
     display: inline-block;
     background-color: #FFF;
