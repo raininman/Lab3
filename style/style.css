@@ -135,7 +135,7 @@ header{
   line-height: 54px;
   background-color: #FDFDFD;
   border-radius: 50px;
-  width:30%;
+  width:35%;
 }
 
 .border{
@@ -844,7 +844,6 @@ grid-template-rows: 1fr;
     font-weight: 700;
     font-size: 20px;
     padding: 0;
-    
   }
   .map_contacts{
     width: 100%;
