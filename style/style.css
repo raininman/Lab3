@@ -541,6 +541,10 @@ fieldset{
   color: white;
 }
 
+.contact_info h3{
+  margin:4%;
+}
+
 .main_footer{
   width: 100vw;
   padding-top: 60px;
