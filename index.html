@@ -27,16 +27,19 @@
             </ul>
           </div>
         </div>
+        <button class="ipad_burger medium_button" @click="navShow = !navShow " v-if="!navShow"><img src="./img/burger.svg"></button>
+        <button class="ipad_burger medium_button" @click="navShow = !navShow" v-if="navShow"><img src="./img/close_nav.svg"></button>
       </nav>
-      <div class="medium">
-        <button class="ipad_burger"></button>
+      
+      <div class="medium" v-if="navShow">
+        
         <nav class="medium_nav">
           <ul>
-          <li><a href="#services" class="nav_list_item">Услуги</a></li>
-            <li><a href="#review" class="nav_list_item">Обзор</a></li>
-            <li><a href="#faq" class="nav_list_item">Вопросы</a></li>
-            <li><a href="#specialists" class="nav_list_item">Персонал</a></li>
-            <li><a href="#contacts" class="nav_list_item">Контакты</a></li>
+          <li class="list_med"><a href="#services" class="nav_list_item_med">Услуги</a></li>
+            <li class="list_med"><a href="#review" class="nav_list_item_med">Обзор</a></li>
+            <li class="list_med"><a href="#faq" class="nav_list_item_med">Вопросы</a></li>
+            <li class="list_med"><a href="#specialists" class="nav_list_item_med">Персонал</a></li>
+            <li class="list_med"><a href="#contacts" class="nav_list_item_med">Контакты</a></li>
           </ul>
         </nav>
       <div class="small">
@@ -58,8 +61,8 @@
         <h2 class="visually_hidden">Ветеринарная клиника</h2>
         <article class="welcome">
           <div class="border">
-            <h2>Ветеринарная<br>клиника</h2>
-            <h3>С заботой<br>о Ваших питомцах</h3>
+            <h2>Ветеринарная клиника</h2>
+            <h3>С заботой о Ваших питомцах</h3>
             <a href="#appointment" class="sign">Записаться на прием</a><br>
             <a class="call" @click="showCall">Заказать звонок</a>
           </div>
@@ -322,7 +325,7 @@
         </h3>
         <h3>E-mail<br>
         <a href="email:pets@pets.by">pets@pets.by</a></h3>
-        <h3>г. Минск, ул. Солнечная 1,<br>222222</h3>
+        <h3>г. Минск, <br>ул. Солнечная 1,<br>222222</h3>
       </section>
     </section>
     </main>
@@ -389,6 +392,7 @@
           FAQ2Close:false,
           FAQ2Close:false,
           FAQ2Close:false,
+          navShow:false,
         }),
         methods:{
           showCall(){

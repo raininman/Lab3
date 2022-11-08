@@ -11,9 +11,14 @@
   font-weight: 400;
 }
 
+* { margin: 0; padding: 0; }
+
 html{
   scroll-behavior: smooth;
   margin-left: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body{
@@ -37,8 +42,6 @@ button{
 .small, .medium{
   display: none;
 }
-
-
 
 .visually_hidden{
   position: absolute;
@@ -82,8 +85,8 @@ header{
   padding: 0 10px;
 }
 
-
- .logo{
+.logo{
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
@@ -91,9 +94,8 @@ header{
   margin-right: 1em;
 }
 
-
 .nav_list{
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 2em;
   list-style: none;
   display: grid;
@@ -133,6 +135,7 @@ header{
   line-height: 54px;
   background-color: #FDFDFD;
   border-radius: 50px;
+  width:25%;
 }
 
 .border{
@@ -179,13 +182,12 @@ header{
   box-shadow: 0px 4px 4px rgba(114, 0, 0, 0.25);
 }
 
-
-
 .services_pics{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0vw;
+  margin-bottom:5% ;
 }
 
 .services li{
@@ -261,6 +263,7 @@ header{
   grid-template-columns: 5fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
+  margin-bottom: 5%;
 }
 
 .border_faq{
@@ -386,7 +389,6 @@ fieldset{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
   grid-row-gap: 10px;
   cursor: pointer;
 }
@@ -410,9 +412,12 @@ fieldset{
 }
 
 .rec{
+  font-size: 32px;
   margin-left: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-top: 5%;
+  margin-bottom: 5%;
 
 }
 
@@ -435,7 +440,6 @@ fieldset{
 .receiptTime input{
   font-size: 36px;
   padding: 5px;
-
   height: 50px;
   background: #FFFFFF;
   border-radius: 10px;
@@ -472,7 +476,6 @@ fieldset{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  
 }
 
 .buttons{
@@ -718,7 +721,9 @@ grid-template-rows: 1fr;
   background: #FFEAD6;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
+.ipad_burger{
+  display: none;
+}
 
 @media (min-width:1440px){
   html{
@@ -727,4 +732,127 @@ grid-template-rows: 1fr;
   .container{
     background-color: white;
   }
+}
+
+@media (max-width:1100px){
+
+  .navigation{
+    display: grid;
+    grid-template-columns: min-content min-content;
+
+  }
+  .medium{
+    display: inline-block;
+    background-color: #FFF;
+    z-index: 99;
+    margin-left: 80%;
+
+  }
+  .medium_nav{
+    padding-bottom: 3%;
+  }
+  .list_med{
+    margin-bottom: 3%;
+    list-style: none;
+  }
+  .ipad_burger{
+    background-color: inherit;
+    border: none;
+  }
+  .medium_nav{
+    text-align: right;
+  }
+  .main_header_navigation{
+    width: 90vw;
+  }
+  .nav_list{
+    display: none;
+  }
+  .welcome{
+    width:80%;
+  }
+  .container{
+    width:100vw;
+    margin: 0;
+    padding: 0;
+  }
+  .services_pics{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .services_pics_item:nth-child(1){
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .services_pics_item:nth-child(2){
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .services_pics_item:nth-child(3){
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  .services_pics_item:nth-child(4){
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  .services_pics_item:nth-child(5){
+    grid-area: 1 / 5 / 2 / 6;
+  }
+  .vet_clinic{
+    height: 80em;
+    background-size:cover;
+    background-image: url('../img/background_med.png');
+  }
+  .petInfo{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+.otherInfo{
+  width: 80%;
+  }
+  .dep{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .rec{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .receiptTime input{
+    width: 80%;
+  }
+  .form_buttons{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 50px;
+  }
+  .submit{
+    width: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+  .reset_button button{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .contact_info{
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0;
+    
+  }
+  .map_contacts{
+    width: 100%;
+    padding:0% ;
+    margin: 0;
+  }
+  .request_call{
+    position: absolute;
+    top: 10vh;
+    left: 10%;
+    width: 80%;
+  }
+
 }
