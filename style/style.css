@@ -745,6 +745,9 @@ grid-template-rows: 1fr;
     grid-template-columns: min-content min-content;
 
   }
+  .nav_list_item_med{
+    text-decoration: none;
+  }
   .ipad_burger{
     display: block;
   }
