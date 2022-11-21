@@ -935,12 +935,16 @@ grid-template-rows: 1fr;
     grid-row-gap: 50px;
   }
   .submit{
-    width: 80%;
+    width: 85%;
     margin-top: 5%;
     margin-left: 10%;
   }
+  .submit_icon{
+    height: 48px;
+    width: 48px;
+  }
   .reset_button button{
-    width: 80%;
+    width: 85%;
     margin-left: 10%;
   }
   .contact_info{
@@ -1160,19 +1164,19 @@ grid-template-rows: 1fr;
     line-height: 22px;
   }
   .receiptTime input{
-    width: 240px;
+    width: 200px;
     font-size: 18px;
     line-height: 22px;
   }
   .receiptTime datalist{
-    width: 240px;
+    width: 200px;
   }
   .receiptTime option{
     font-size: 18px;
     line-height: 22px;
   }
   .receipt input{
-    width: 240px;
+    width: 200px;
     font-size: 18px;
     line-height: 22px;
   }
