@@ -1,13 +1,13 @@
 
 @font-face {
   font-family: Comfortaa;
-  src: url(../fonts/Comfortaa/static/Comfortaa-Bold.ttf);
+  src: url(../fonts/Comfortaa/static/Comfortaa-Bold.woff2);
   font-weight: 700;
 }
 
 @font-face {
   font-family: Comfortaa;
-  src: url(../fonts/Comfortaa/static/Comfortaa-Regular.ttf);
+  src: url(../fonts/Comfortaa/static/Comfortaa-Regular.woff2);
   font-weight: 400;
 }
 
@@ -155,7 +155,7 @@ header{
 
 .welcome h3{
   font-size: 36px;
-  margin-left: 42px;
+  margin-left: 20px;
   margin-bottom: 74px;
 }
 
