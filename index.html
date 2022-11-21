@@ -27,7 +27,7 @@
             </ul>
           </div>
         </div>
-        <button class="ipad_burger medium_button" @click="navShow = !navShow " ><img src="./img/burger.svg"></button>
+        <button class="ipad_burger medium_button" @click="navShow = !navShow " v-if="!navShow" ><img src="./img/burger.svg"></button>
       </nav>
       <div class="medium" v-if="navShow">
         <button class="ipad_burger medium_button burger_close_button" @click="navShow = !navShow" v-if="navShow"><img src="./img/close_nav.svg"></button>
@@ -205,7 +205,7 @@
             <fieldset class="ownerInfo">
               <input id="name" placeholder="Имя*" type="text" required class="info"><br>
               <input id="surname" placeholder="Фамилия*" type="text" required><br>
-              <input id="telephone" placeholder="Телефон*" type="tel" required maxlength="14" minlength="13"><br>
+              <input id="telephone" placeholder="Телефон*" type="tel" pattern="\+375\d{9}" required maxlength="13" minlength="13" value="+375"><br>
             </fieldset>
             <p>Ваш питомец*</p>
             <fieldset class="petInfo">
@@ -361,16 +361,16 @@
         </svg>
       </button>
       <h2>Заказать звонок</h2>
-      <form action="#">
+      <form action="#" method="get">
         <fieldset class="call_info">
           <label for="callName">ФИО*</label><br>
           <input id="callName" type="text" required class="call_input"><br>
           <label for="callTel">Телефон*</label><br>
-          <input id="callTel" type="text" required class="call_input" value="+375" maxlength="13" minlength="13"><br>
+          <input id="callTel" type="text" required class="call_input" value="+375" pattern="\+375\d{9}" maxlength="13" minlength="13"><br>
           <label for="callProblem">Кратко опишите Вашу проблему*</label><br>
           <input id="callProblem" type="tel" required class="call_input big_input"><br>
         </fieldset>
-        <button type="submit" id="callSubmit" class="call_button" @click.prevent="showCall">Заказать звонок</button>
+        <button type="submit" id="callSubmit" class="call_button" @click="showCall">Заказать звонок</button>
         </form>
       </div>
     </section>

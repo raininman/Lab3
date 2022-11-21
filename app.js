@@ -80,6 +80,7 @@ const sliderLine = document.querySelector('.slider-line');
 const viewportWidth = window.innerWidth;
 
 if(viewportWidth >=768){
+  
 document.querySelector('.right_arrow').addEventListener('click', function(){
     offset = offset + 500;
     if (offset > 1000) {
@@ -95,7 +96,30 @@ document.querySelector('.left_arrow').addEventListener('click', function () {
     }
     sliderLine.style.left = -offset + 'px';
 });
+
+const slider = document.querySelectorAll('.slider_item')
+  for (var i = 0; i < slider.length; i++) {
+    slider[i].addEventListener('click', function(){
+      offset = offset + 500;
+    if (offset > 1000) {
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + 'px';
+  });
+}
 }else{
+
+  const slider = document.querySelectorAll('.slider_item')
+  for (var i = 0; i < slider.length; i++) {
+    slider[i].addEventListener('click', function(){
+      offset = offset + 150;
+      if (offset > 300) {
+          offset = 0;
+      }
+      sliderLine.style.left = -offset + 'px';
+  });
+}
+
   document.querySelector('.right_arrow').addEventListener('click', function(){
     offset = offset + 150;
     if (offset > 300) {
@@ -103,6 +127,7 @@ document.querySelector('.left_arrow').addEventListener('click', function () {
     }
     sliderLine.style.left = -offset + 'px';
 });
+
 
 document.querySelector('.left_arrow').addEventListener('click', function () {
     offset = offset - 150;
@@ -112,4 +137,3 @@ document.querySelector('.left_arrow').addEventListener('click', function () {
     sliderLine.style.left = -offset + 'px';
 });
 }
-
