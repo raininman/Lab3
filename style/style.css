@@ -11,7 +11,8 @@
   font-weight: 400;
 }
 
-* { margin: 0; padding: 0; }
+* { margin: 0;
+   padding: 0; box-sizing: border-box;}
 
 html{
   scroll-behavior: smooth;
@@ -787,7 +788,7 @@ grid-template-rows: 1fr;
     background-color: lightgray;
   }
   .container{
-    width: 768px;
+    width: 767px;
     background-color: white;
   }
   .navigation{
@@ -833,6 +834,7 @@ grid-template-rows: 1fr;
   .ipad_burger{
     background-color: inherit;
     border: none;
+    width: 10vw;
   }
   .main_header_navigation{
     width: 90vw;
